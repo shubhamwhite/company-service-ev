@@ -17,6 +17,9 @@ app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+app.use('/bookings', require('./router/booking.routes'))
+app.use('/events', require('./router/events.routes'))
+
 app.get('/company-service', (req, res) => {
   res.send('Hello from the Express app!')
 })

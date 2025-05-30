@@ -8,7 +8,9 @@ exports.connectDB = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true
     })
-    color.success('MongoDB Database connection has been established successfully.')
+    color.success(
+      'MongoDB Database connection has been established successfully.'
+    )
   } catch (error) {
     color.error(`Error: ${error.message}`)
     process.exit(1)
